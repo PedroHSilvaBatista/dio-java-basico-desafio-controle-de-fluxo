@@ -11,10 +11,18 @@ public class Contador {
         System.out.println("Digite o valor do segundo parâmetro: ");
         int parametro2 = terminal.nextInt();
 
-        // Criar a Exceção "ParametrosInvalidosException"
+        // Utilizar o método contar utilizando o bloco try/catch
+    }
 
-        // Criar o método contar
+    public static void contar (int primeiroParametro, int segundoParametro) throws ParametrosInvalidosException {
+        if (primeiroParametro > segundoParametro) {
+            throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");
+        }
 
-        // Desenvolver o método contar validando os parâmetros passados e criar a estrutura de repetição
+        int contagem = segundoParametro - primeiroParametro;
+
+        for (int i=1; i <= contagem; i++) {
+            System.out.println("Imprimindo o número " + i);
+        }
     }
 }
