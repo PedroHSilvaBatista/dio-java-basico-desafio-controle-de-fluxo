@@ -8,10 +8,14 @@ public class Contador {
         System.out.print("Digite o valor do primeiro parâmetro: ");
         int parametro1 = terminal.nextInt();
 
-        System.out.println("Digite o valor do segundo parâmetro: ");
+        System.out.print("Digite o valor do segundo parâmetro: ");
         int parametro2 = terminal.nextInt();
 
-        // Utilizar o método contar utilizando o bloco try/catch
+        try {
+            contar(parametro1, parametro2);
+        } catch (ParametrosInvalidosException e) {
+            System.out.println("Mensagem de erro: " + e.getMessage());
+        }
     }
 
     public static void contar (int primeiroParametro, int segundoParametro) throws ParametrosInvalidosException {
