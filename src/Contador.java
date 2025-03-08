@@ -1,8 +1,15 @@
+import java.util.Scanner;
+
+
 public class Contador {
     public static void main(String[] args) {
-        // TODO: importar a classe Scanner
+        Scanner terminal = new Scanner(System.in);
 
-        // Requisitar os parâmetros ao usuário
+        System.out.print("Digite o valor do primeiro parâmetro: ");
+        int parametro1 = terminal.nextInt();
+
+        System.out.println("Digite o valor do segundo parâmetro: ");
+        int parametro2 = terminal.nextInt();
 
         // Criar a Exceção "ParametrosInvalidosException"
 
